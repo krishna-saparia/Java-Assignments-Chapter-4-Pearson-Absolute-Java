@@ -82,11 +82,18 @@ public class Temperature {
         }
         return false;
     }
-    
 
+    @Override
+    public String toString() {
 
-
-   // @Override
+        if(scale == 'C'){
+            return String.format(" %.1f degree Celsius = %.1f degree Fahrenheit" ,tempValue ,getFahrenheit());
+        }
+        else{
+            return String.format("%.1f degree Fahrenheit = %.1f degree Celsius" , tempValue,getCelsiusTemp());
+        }
+    }
+    // @Override
    /* public int hashCode() {
     *   return Objects.hash(tempValue, scale);
     *}
