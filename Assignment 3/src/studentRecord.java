@@ -60,6 +60,16 @@ public class studentRecord {
         return midterm * 0.35;  // midterm score will weigh to 35% of final score
     }
 
+
+
+    public double getFinalExamScore(){
+        return finalExam * 0.4;
+    }
+
+    public double getFinalGrade(){
+        return getQuizScore() + getMidtermScore() + getFinalExamScore();
+    }
+
     @Override
     public String toString() {
         double numericGrade = getFinalGrade();
@@ -70,14 +80,26 @@ public class studentRecord {
                 ", midterm=" + midterm +
                 ", finalExam=" + finalExam +
                 ", Numeric Grade=" + numericGrade+
+                ", Grade= " +getAlphabeticGrade(numericGrade)+
                 '}';
     }
 
-    public double getFinalExamScore(){
-        return finalExam * 0.4;
-    }
+    public String getAlphabeticGrade(double numberedScore){
 
-    public double getFinalGrade(){
-        return getQuizScore() + getMidtermScore() + getFinalExamScore();
+        if(numberedScore >= 90){
+            return " A Grade !!!! Congrats";
+        }
+        else if(numberedScore < 90 && numberedScore >= 80){
+            return " B Grade !!!! ";
+        }
+        else if(numberedScore < 80 && numberedScore >= 70){
+            return " C Grade !!!!";
+        }
+        else if(numberedScore < 70 && numberedScore >= 60){
+            return " D Grade :( ";
+        }
+        else {
+            return " F Grade :( :(";
+        }
     }
 }
