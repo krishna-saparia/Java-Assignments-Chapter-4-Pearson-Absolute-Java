@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Temperature {
     private double tempValue;
     private char scale;
@@ -56,4 +58,37 @@ public class Temperature {
         this.scale = scale;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if(o instanceof Temperature){
+            Temperature t1 = (Temperature) o;
+            return getCelsiusTemp() == t1.getCelsiusTemp();
+        }
+        return false;
+    }
+
+    public boolean lessThan(Object o) {
+        if(o instanceof Temperature){
+            Temperature t1 = (Temperature) o;
+            return getCelsiusTemp() > t1.getCelsiusTemp();
+        }
+        return false;
+    }
+
+    public boolean greaterThan(Object o) {
+        if(o instanceof Temperature){
+            Temperature t1 = (Temperature) o;
+            return getCelsiusTemp() < t1.getCelsiusTemp();
+        }
+        return false;
+    }
+    
+
+
+
+   // @Override
+   /* public int hashCode() {
+    *   return Objects.hash(tempValue, scale);
+    *}
+    */
 }
