@@ -3,27 +3,29 @@ import java.util.Objects;
 public class Temperature {
     private double tempValue;
     private char scale;
-
+    // Create 4 Constructors.
+    // A first Constructor set initial or default value
     public Temperature(){
         tempValue = 0;
         scale = 'C';
     }
-
+    // This Constructor take argument value of tempvalue & another parameter set to default
     public Temperature(double temp){
         this.tempValue = temp;
         scale = 'C';
     }
-
+    // This Constructor take argument value of scale & another parameter set to default
     public Temperature(char scl){
         this.scale = scl;
         tempValue = 0;
     }
-
+    // This constructor takes two parameters
     public Temperature(double temp , char scl){
         this.tempValue = temp;
         this.scale = scl;
     }
 
+    // Method to get celsius temperature
     public double getCelsiusTemp(){
         if (scale == 'C'){
             return tempValue;
@@ -34,6 +36,7 @@ public class Temperature {
         }
     }
 
+    // Method to get fahrenheit temperature
     public double getFahrenheit(){
         if (scale == 'F' ){
             return tempValue;
@@ -45,6 +48,7 @@ public class Temperature {
         }
     }
 
+    //Methods to set values
     public void setTempValue(double tempValue1){
         this.tempValue = tempValue1;
     }
@@ -58,6 +62,7 @@ public class Temperature {
         this.scale = scale1;
     }
 
+    //Equals method to compare different object's temperature value
     @Override
     public boolean equals(Object o) {
         if(o instanceof Temperature){
@@ -83,6 +88,7 @@ public class Temperature {
         return false;
     }
 
+    //This method converts into string
     @Override
     public String toString() {
 
