@@ -1,3 +1,4 @@
+
 public class studentRecord {
     private int quiz1;
     private int quiz2;
