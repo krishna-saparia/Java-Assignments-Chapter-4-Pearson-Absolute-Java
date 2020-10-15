@@ -43,6 +43,17 @@ public class Temperature {
         }
     }
 
+    public void setTempValue(){
+        this.tempValue = tempValue;
+    }
 
+    public void setScale(){
+        this.scale = scale;
+    }
+
+    public void setTempvalueAndScale(double tempValue , char scale){
+        this.tempValue = tempValue;
+        this.scale = scale;
+    }
 
 }
