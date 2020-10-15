@@ -45,17 +45,17 @@ public class Temperature {
         }
     }
 
-    public void setTempValue(){
-        this.tempValue = tempValue;
+    public void setTempValue(double tempValue1){
+        this.tempValue = tempValue1;
     }
 
-    public void setScale(){
-        this.scale = scale;
+    public void setScale(char scale1){
+        this.scale = scale1;
     }
 
-    public void setTempvalueAndScale(double tempValue , char scale){
-        this.tempValue = tempValue;
-        this.scale = scale;
+    public void setTempvalueAndScale(double tempValue1 , char scale1){
+        this.tempValue = tempValue1;
+        this.scale = scale1;
     }
 
     @Override
