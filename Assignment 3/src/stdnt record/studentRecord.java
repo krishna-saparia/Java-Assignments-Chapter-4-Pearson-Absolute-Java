@@ -7,9 +7,9 @@ public class studentRecord {
     private int finalExam;
     //private int final_grade;
 
-    public studentRecord(int q1 , int q2 , int q3 , int mt , int ovrlScr){
+    public studentRecord(int q1 , int q2 , int q3 , int mt , int exmScr){
         midterm = mt;
-        finalExam = ovrlScr;
+        finalExam = exmScr;
         if(q1 > 100 || q1 < 0){
             System.out.println("Invalid input score : must be between 0 to 100");
             return;
@@ -42,12 +42,12 @@ public class studentRecord {
             midterm = mt;
         }
 
-        if(ovrlScr > 100 || ovrlScr < 0){
+        if(exmScr > 100 || exmScr < 0){
             System.out.println("Invalid final score : must be between 0 to 100");
             return;
         }
         else {
-            finalExam = ovrlScr;
+            finalExam = exmScr;
         }
 
     }
@@ -71,6 +71,7 @@ public class studentRecord {
         return getQuizScore() + getMidtermScore() + getFinalExamScore();
     }
 
+
     @Override
     public String toString() {
         double numericGrade = getFinalGrade();
@@ -85,6 +86,14 @@ public class studentRecord {
                 '}';
     }
 
+    //Set values to zero
+    public void studentRecord(){
+        quiz1 = 0;
+        quiz2 = 0;
+        quiz3 = 0;
+        midterm = 0;
+        finalExam = 0;
+    }
     public String getAlphabeticGrade(double numberedScore){
 
         if(numberedScore >= 90){
