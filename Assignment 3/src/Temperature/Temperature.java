@@ -9,7 +9,7 @@ public class Temperature {
         tempValue = 0;
         scale = 'C';
     }
-    // This Constructor take argument value of tempvalue & another parameter set to default
+    // This Constructor with parameter take argument value of tempvalue & another parameter set to default
     public Temperature(double temp){
         this.tempValue = temp;
         scale = 'C';
